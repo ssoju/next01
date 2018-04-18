@@ -22,7 +22,7 @@ module.exports = {
   loading: { color: '#3B8070' },
   
   router: {
-    scrollBehavior: (to, from, savedPosition) => {
+    scrollBehavior(to, from, savedPosition) {
       // savedPosition은 오직 popstate 동작으로 가능합니다.
       if (savedPosition) {
         return savedPosition
@@ -43,6 +43,13 @@ module.exports = {
         }
         return position
       }
+    },
+    extendRoutes (routes, resolve) {
+      routes.push({
+        name: 'custom',
+        path: '*',
+        component: resolve(__dirname, 'pages/404.vue')
+      })
     }
   },
   /*
