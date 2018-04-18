@@ -1,5 +1,8 @@
 <template>
-    <nuxt-child />
+    <div>
+        <p>Sub Category</p>
+        <nuxt-child />
+    </div>    
 </template>
 
 <script>
