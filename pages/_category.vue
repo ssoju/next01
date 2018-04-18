@@ -1,5 +1,8 @@
 <template>
-  <nuxt-child />
+  <div>
+    <p>Categiry</p>
+    <nuxt-child />
+  </div> 
 </template>
 
 <script>
