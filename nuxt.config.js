@@ -20,6 +20,31 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+  
+  router: {
+    scrollBehavior: (to, from, savedPosition) => {
+      // savedPosition은 오직 popstate 동작으로 가능합니다.
+      if (savedPosition) {
+        return savedPosition
+      } else {
+        let position = {}
+        // 만약 children 요소가 감지되지 않는다면
+        if (to.matched.length < 2) {
+          // 페이지 상단으로 스크롤됩니다.
+          position = { x: 0, y: 0 }
+        }
+        else if (to.matched.some((r) => r.components.default.options.scrollToTop)) {
+          // 어떤 자식요소가 scrollToTop 옵션으로 설정되어있다면
+          position = { x: 0, y: 0 }
+        }
+        // link가 anchor를 가지고 있을 경우, 반환된 선택자를 이용해 anchor로 이동합니다.
+        if (to.hash) {
+          position = { selector: to.hash }
+        }
+        return position
+      }
+    }
+  },
   /*
   ** Build configuration
   */
