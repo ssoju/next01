@@ -1,10 +1,11 @@
 <template>
-    <div>Category Index</div>
+    <div>Category Index {{$t('home.title')}}</div>
 </template>
 
 <script>
     export default {
-        name: "index"
+        name: "index",
+        middleware: "auth"
     }
 </script>
 
