@@ -18,10 +18,11 @@
                         accessToken: ''
                     }
 
-                    Cookie.set('auth', auth);
+                    Cookie.set('auth', auth)
+                    localStorage.setItem('id_token', auth.accessToken)
 
-                    this.$store.commit('auth/update', auth);
-                    this.$router.push('/');
+                    this.$store.commit('auth/update', auth)
+                    this.$router.push('/')
                 }, 1000)
             }
         }
