@@ -16,15 +16,17 @@ const createStore = () => {
             word,
             auth
         },
-        state: {},
+        state: {
+            locales: 'ko'
+        },
         actions: {
             nuxtServerInit({commit}, {req}) {
                 let accessToken = null
-                if (req.headers.cookie) {
-                    const parsed = cookieparser.parse(req.headers.cookie)
+                const parsed = cookieparser.parse(req.headers.cookie)
+                if (parsed && parsed.auth) {
                     accessToken = JSON.parse(parsed.auth)
                 }
-                commit('auth/update', accessToken)
+                //TODO commit('auth/update', accessToken)
             }
         },
         strict: debug,
