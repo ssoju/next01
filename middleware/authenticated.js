@@ -1,5 +1,5 @@
 export default function ({ store, redirect }) {
-    if (true/*!store.state.auth.authenticated*/) {
+    if (!store.state.auth.authenticated) {
         /*redirect({
             message: 'You are not connected',
             statusCode: 403

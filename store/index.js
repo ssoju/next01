@@ -23,11 +23,10 @@ const createStore = () => {
             nuxtServerInit({commit}, {req}) {
                 let accessToken = null
                 const parsed = cookieparser.parse(req.headers.cookie)
-
                 if (parsed && parsed.auth) {
-                    accessToken = JSON.parse(parsed.auth || '')
+                    accessToken = JSON.parse(parsed.auth)
                 }
-                //commit('auth/check', accessToken)
+                //TODO commit('auth/update', accessToken)
             }
         },
         strict: debug,

@@ -1,0 +1,57 @@
+Arguments: 
+  /usr/local/Cellar/node/7.0.0/bin/node /usr/local/bin/yarn
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  7.0.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "nuxt01",
+    "version": "1.0.0",
+    "description": "Nuxt.js project",
+    "author": "comahead <comahead@gmail.com>",
+    "private": true,
+    "scripts": {
+      "dev": "nuxt",
+      "build": "nuxt build",
+      "start": "nuxt start",
+      "generate": "nuxt generate",
+      "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+      "precommit": "npm run lint"
+    },
+    "dependencies": {
+      "nuxt": "^1.4.0"
+    },
+    "devDependencies": {
+      "babel-eslint": "^8.2.1",
+      "eslint": "^4.15.0",
+      "eslint-friendly-formatter": "^3.0.0",
+      "eslint-loader": "^1.7.1",
+      "eslint-plugin-vue": "^4.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Found incompatible module
+      at new MessageError (/usr/local/lib/node_modules/yarn/lib/cli.js:186:110)
+      at checkOne (/usr/local/lib/node_modules/yarn/lib/cli.js:62444:11)
+      at Object.check (/usr/local/lib/node_modules/yarn/lib/cli.js:62463:5)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:22803:73
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:98:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:109:13
