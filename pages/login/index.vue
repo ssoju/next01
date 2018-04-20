@@ -9,7 +9,7 @@
 
     export default {
         name: "login",
-        middleware: "notAuthenticated",
+        middleware: "notAuth",
 
         methods: {
             postLogin () {

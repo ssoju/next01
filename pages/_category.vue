@@ -8,7 +8,7 @@
 <script>
     export default {
         name: 'category',
-        middleware: 'authenticated',
+        middleware: 'auth',
         created() {
             console.dir(this.$route.params)
         }
