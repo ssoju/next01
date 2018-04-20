@@ -8,7 +8,8 @@ import {
 //import JwtService from '@/services/jwt.service';
 
 export default {
-    [CHECK](state) {
+    [CHECK](state, payload) {
+        console.log('aa');
         state.authenticated = !!Vue.auth.token();
     },
 

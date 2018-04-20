@@ -1,1 +1,5 @@
-export default {}
+export default {
+    isLogined (state) {
+        return state.authenticated
+    }
+}
