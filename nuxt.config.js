@@ -1,9 +1,12 @@
+const bodyParser = require('body-parser')
+const session = require('express-session')
+
 module.exports = {
   /*
   ** Headers of the page
   */
   head: {
-    title: 'nuxt01',
+    title: 'vinylc family',
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
@@ -19,10 +22,11 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  loading: {color: '#3B8070'},
+  ////loading: {color: '#3B8070'},
+  loading: false,
 
   router: {
-    middleware: 'i18n',
+    middleware: ['i18n'],
     scrollBehavior(to, from, savedPosition) {
       // savedPosition은 오직 popstate 동작으로 가능합니다.
       if (savedPosition) {
@@ -56,6 +60,18 @@ module.exports = {
 
   plugins: ['@/plugins/i18n.js'],
 
+  serverMiddleware: [
+    bodyParser.json(),
+    session({
+      secret: 'super-secret-key',
+      resave: true,
+      saveUninitialized: false,
+      cookie: { maxAge: 60000 }
+    })
+  ],
+
+  //proxy: 'http://word.api.maru.zone/api/v1',
+
   /*
   ** Build configuration
   */
@@ -65,6 +81,11 @@ module.exports = {
     },
 
     vendor: ['axios'],
+
+    css: [
+      'normalize.css',
+      '~assets/sass/main.scss'
+    ],
 
     /*
     ** Run ESLint on save

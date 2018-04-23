@@ -1,3 +1,4 @@
 export default {
-  locales: 'ko'
+  locales: ['en', 'ko'],
+  locale: 'ko'
 }
