@@ -15,15 +15,15 @@ module.exports = {
     link: [
       {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
     ],
-    css: [
-      'assets/common.css'
-    ]
   },
+  css: [
+    '~assets/css/common.css'
+  ],
   /*
   ** Customize the progress bar color
   */
-  ////loading: {color: '#3B8070'},
-  loading: false,
+  loading: {color: '#3B8070'},
+  ////loading: false,
 
   router: {
     middleware: ['i18n'],
@@ -58,7 +58,7 @@ module.exports = {
     }
   },
 
-  plugins: ['@/plugins/i18n.js'],
+  plugins: ['@/plugins/i18n.js', '@/plugins/axios.js'],
 
   serverMiddleware: [
     bodyParser.json(),
@@ -82,15 +82,10 @@ module.exports = {
 
     vendor: ['axios'],
 
-    css: [
-      'normalize.css',
-      '~assets/sass/main.scss'
-    ],
-
     /*
     ** Run ESLint on save
     */
-    extend(config, {isDev, isClient}) {
+    /*extend(config, {isDev, isClient}) {
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
@@ -99,14 +94,15 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    },
+    },*/
 
-    filenames: {
-      css: 'style.[contenthash].css',
-      manifest: 'menifest.[hash].js',
-      vendor: 'vendors.[chunkhash].js',
-      app: 'app.[chunkhash].js',
-      chunk: '[name].[chunkhash].js'
-    }
-  }
+  },
+
+  manifest: {
+    name: 'family',
+    description: '...',
+    theme_color: '#000000'
+  },
+
+  modules: ['@nuxtjs/pwa', '@nuxtjs/axios']
 }
