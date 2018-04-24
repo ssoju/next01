@@ -58,7 +58,7 @@ module.exports = {
     }
   },
 
-  plugins: ['@/plugins/i18n.js', '@/plugins/axios.js'],
+  plugins: ['@/plugins/bootloader.js', '@/plugins/i18n.js', '@/plugins/axios.js'],
 
   serverMiddleware: [
     bodyParser.json(),

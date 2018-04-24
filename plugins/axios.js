@@ -20,13 +20,13 @@ export default ({ app, store }) => {
 
   console.log('111', app, store)
   axios.interceptors.request.use(function (config) {
-    const token = store.auth.token || '';
+    /**const token = (store && store.auth && store.auth.token) || ''
 
     if (token) {
       Object.assign(config.headers, {
         'Authorization': 'Bearer ' + token
       })
-    }
+    }**/
 
     return config;
   }, function (error) {

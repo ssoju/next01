@@ -21,6 +21,7 @@ export default {
 
     [type.LOGIN](state, data) {
         state.authenticated = true
+        state.token = data.token;
     },
 
     [type.LOGOUT](state) {
