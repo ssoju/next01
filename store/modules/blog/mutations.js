@@ -1,21 +1,16 @@
-import Vue from 'vue';
-import {
-    LIST,
-    GET
-} from './mutation-types';
+import Vue from 'vue'
+import * as type from './mutation-types'
 
 export default {
-    [LIST](state, result) {
-        if (state.page === 1) {
-            state.list = [];
-        }
+  [type.CREATE_TAG](state, result) {
 
-        state.page = state.page + 1;
-        state.loadedAll = result.page >= result.totalPage;
-        state.list = state.list.concat(result.data);
-    },
+  },
 
-    [GET](state, data) {
+  [type.UPDATE_TAG](state, data) {
 
-    }
-};
+  },
+
+  [type.DELETE_TAG](state, data) {
+
+  }
+}

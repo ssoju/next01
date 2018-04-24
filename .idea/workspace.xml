@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b2ffaf2-9c20-49dd-8480-11b5dec24f8e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/plugins/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/axios.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/modules/auth/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/modules/auth/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/modules/blog/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/modules/blog/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/modules/auth/mutations.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/modules/auth/mutations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/modules/blog/mutations.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/modules/blog/mutations.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,18 +17,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/store/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="688">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="actions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/store/modules/blog/actions.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -42,13 +29,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="actions.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="actions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/store/modules/auth/actions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="752">
+              <caret line="47" column="11" lean-forward="true" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
               <folding>
                 <element signature="e#38#59#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mutations.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/store/modules/blog/mutations.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#22#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -97,11 +96,14 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="mutations.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mutations.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/store/modules/auth/mutations.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+            <state relative-caret-position="400">
+              <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#22#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -149,7 +151,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/plugins/vue-auth/lib/utils.js" />
         <option value="$PROJECT_DIR$/plugins/vue-auth/index.js" />
         <option value="$PROJECT_DIR$/plugins/auth.js" />
         <option value="$PROJECT_DIR$/api/index.js" />
@@ -157,7 +158,6 @@
         <option value="$PROJECT_DIR$/backend.config.js" />
         <option value="$PROJECT_DIR$/start.js" />
         <option value="$PROJECT_DIR$/store/modules/auth/mutation-types.js" />
-        <option value="$PROJECT_DIR$/store/modules/auth/mutations.js" />
         <option value="$PROJECT_DIR$/middleware/auth.js" />
         <option value="$PROJECT_DIR$/layouts/default.vue" />
         <option value="$PROJECT_DIR$/store/modules/auth/state.js" />
@@ -200,6 +200,8 @@
         <option value="$PROJECT_DIR$/plugins/axios.js" />
         <option value="$PROJECT_DIR$/store/modules/blog/actions.js" />
         <option value="$PROJECT_DIR$/store/modules/auth/actions.js" />
+        <option value="$PROJECT_DIR$/store/modules/blog/mutations.js" />
+        <option value="$PROJECT_DIR$/store/modules/auth/mutations.js" />
       </list>
     </option>
   </component>
@@ -348,7 +350,7 @@
       <option name="presentableId" value="Default" />
       <updated>1524099206301</updated>
       <workItem from="1524099207802" duration="7089000" />
-      <workItem from="1524449746646" duration="36268000" />
+      <workItem from="1524449746646" duration="36593000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1524191912972</created>
@@ -361,7 +363,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56969000" />
+    <option name="totallyTimeSpent" value="57294000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1208" y="-492" width="1216" height="1896" extended-state="6" />
@@ -375,7 +377,7 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.32973894" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.50227016" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.50227016" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -399,13 +401,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/store/common/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/middleware/auth.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -727,13 +722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store/modules/auth/mutations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/store/modules/auth/mutation-types.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -779,10 +767,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/store/modules/auth/actions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="752">
+          <caret line="47" column="11" lean-forward="true" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
           <folding>
             <element signature="e#38#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store/modules/blog/mutations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store/modules/auth/mutations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
