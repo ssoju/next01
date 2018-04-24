@@ -5,7 +5,7 @@ import createLogger from 'vuex/dist/logger'
 import cookieparser from 'cookieparser'
 
 import auth from './modules/auth'
-import word from './modules/word'
+import blog from './modules/blog'
 import {mutations, state, actions, getters} from './common'
 
 const debug = process.env.NODE_ENV !== 'production'
@@ -15,7 +15,7 @@ Vue.use(Vuex)
 const createStore = () => {
   return new Vuex.Store({
     modules: {
-      word,
+      blog,
       auth
     },
     getters,

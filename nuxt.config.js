@@ -17,7 +17,7 @@ module.exports = {
     ],
   },
   css: [
-    '~assets/css/common.css'
+    '~assets/css/common.scss'
   ],
   /*
   ** Customize the progress bar color
@@ -99,7 +99,7 @@ module.exports = {
   },
 
   manifest: {
-    name: 'family',
+    name: 'blog',
     description: '...',
     theme_color: '#000000'
   },

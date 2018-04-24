@@ -1,8 +1,29 @@
-
-export const LIST = "LIST"
-export const GET = "GET"
+export const CREATE_TAG = "CREATE_TAG"
+export const DELETE_TAG = "DELETE_TAG"
+export const UPDATE_TAG = "UPDATE_TAG"
+export const TAGS = "TAGS"
+export const SEARCH = "SEARCH"
+export const ARTICLES = "ARTICLES"
+export const PRIVATE_ARTICLES = "PRIVATE_ARTICLES"
+export const CREATE_ARTICLE = "CREATE_ARTICLE"
+export const DELETE_ARTICLE = "DELETE_ARTICLE"
+export const UPDATE_ARTICLE = "UPDATE_ARTICLE"
+export const ARTICLE_DETAIL = "ARTICLE_DETAIL"
+export const ADMIN_INFO = "ADMIN_INFO"
+export const UPDATE_ADMIN = "UPDATE_ADMIN"
 
 export default {
-    LIST,
-    GET
-};
+  CREATE_TAG,
+  DELETE_TAG,
+  UPDATE_TAG,
+  TAGS,
+  SEARCH,
+  ARTICLES,
+  PRIVATE_ARTICLES,
+  CREATE_ARTICLE,
+  DELETE_ARTICLE,
+  UPDATE_ARTICLE,
+  ARTICLE_DETAIL,
+  ADMIN_INFO,
+  UPDATE_ADMIN
+}

@@ -1,12 +1,12 @@
 <template>
   <div class="index">
-    <top-lists :articles="articles" />
+    <top-lists :articles="articles"/>
     <div class="page" v-if="maxPage > 1">
       <div class="page-prev">
         <a v-if="page > 1" @click="prevPage">« Prev </a>
       </div>
       <div class="page-next">
-        <a v-if="hasMore"  @click="nextPage">Next »</a>
+        <a v-if="hasMore" @click="nextPage">Next »</a>
       </div>
     </div>
   </div>
@@ -15,16 +15,11 @@
   export default {
     async asyncData({store, route}) {
       let page = route.params.id || 1
-      let data = await store.dispatch('blog/ARTICLES', page)
+      let data = await store.dispatch('ARTICLES', page)
       if(data.success) {
         return {
           articles: data.data,
           total: data.total
-        }
-      } else {
-        return {
-          articles: [],
-          total: 0
         }
       }
     },

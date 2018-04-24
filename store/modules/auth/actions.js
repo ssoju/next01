@@ -1,61 +1,46 @@
-import Vue from 'vue';
-import * as types from './mutation-types';
+import * as types from './mutation-types'
+import axios from '@/plugins/axios'
 
-export const check = (store) => { // ({commit}) => commit(...)
+export const CHECK = (store) => { // ({commit}) => commit(...)
     store.commit(types.CHECK);
 };
 
-export const register = ({commit}, payload) => {
-    Vue.auth
-        .register({
+export const REGISTER = ({commit}, payload) => {
+    axios.post(`auth/register`, {
             data: {...payload}
         })
         .then((response) => {
             commit(types.REGISTER, response.data); // mutation 메소드 호출
-            Vue.router.push({
-                name: 'home.index'
-            });
         });
 };
 
-export const login = ({commit}, payload) => {
-    Vue.auth
-        .login({
+export const LOGIN = ({commit}, payload) => {
+    axios.post(`auth/login`, {
             data: {
                 ...payload
-            },
-            rememberMe: true
+            }
         })
         .then((response) => {
             commit(types.LOGIN, {
                 token: response.data.token
             }); // mutation 메소드 호출
-
-            Vue.router.push({
-                name: 'home.index'
-            });
         }).catch((a, b, c) => {
         console.error(a, b, c);
     });
 };
 
 
-export const logout = ({commit}) => {
-    Vue.auth
-        .logout()
+export const LOGOUT = ({commit}) => {
+    axios.post(`auth/logout`)
         .then(() => {
             commit(types.LOGOUT); // mutation 메소드 호출
-
-            Vue.router.push({
-                name: 'login.index',
-            });
         });
 };
 
 
 export default {
-    check,
-    register,
-    login,
-    logout,
+    CHECK,
+    REGISTER,
+    LOGIN,
+    LOGOUT,
 };
