@@ -1,5 +1,8 @@
+//import axios from '@/plugins/axios'
+import Vue from 'vue'
 import * as types from './mutation-types'
-import axios from '@/plugins/axios'
+
+const axios = Vue.axios
 
 export const CHECK = (store) => { // ({commit}) => commit(...)
     store.commit(types.CHECK);

@@ -2,51 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b2ffaf2-9c20-49dd-8480-11b5dec24f8e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/components/top-comments.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/top-lists.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/top-tip.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/admin/private.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/admin/publish/_id.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/admin/tags.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/admin/update.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/archives.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/detail/_id.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/page/_id.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/search/_id.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/tags/_id.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/config/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/controllers/article.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/controllers/tag.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/controllers/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/middlewares/check-token.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/models/article.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/models/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/models/tag.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/models/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/common.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/loading.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/axios.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/modules/auth/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/modules/auth/actions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/modules/blog/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/modules/blog/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/modules/blog/mutation-types.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/modules/blog/mutation-types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/modules/word/actions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/modules/word/getters.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/modules/word/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/modules/word/mutation-types.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/modules/word/mutations.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/modules/word/state.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/yarn-error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -75,10 +33,10 @@
       <file leaf-file-name="actions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/store/modules/blog/actions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
-              <caret line="1" column="42" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
+            <state>
+              <caret selection-end-line="5" />
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#38#56#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -87,10 +45,29 @@
       <file leaf-file-name="actions.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/store/modules/auth/actions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="80">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
               <folding>
-                <element signature="e#1#42#0" expanded="true" />
+                <element signature="e#38#59#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="axios.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugins/axios.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="state.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/store/modules/auth/state.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="32">
+              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -134,24 +111,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="464">
               <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="top-comments.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/top-comments.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="740">
-              <caret line="50" column="19" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/index.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
-              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -204,7 +163,6 @@
         <option value="$PROJECT_DIR$/store/modules/auth/state.js" />
         <option value="$PROJECT_DIR$/layouts/error.vue" />
         <option value="$PROJECT_DIR$/assets/css/vars.scss" />
-        <option value="$PROJECT_DIR$/plugins/axios.js" />
         <option value="$PROJECT_DIR$/server/controllers/tag.js" />
         <option value="$PROJECT_DIR$/server/middleware/check-token.js" />
         <option value="$PROJECT_DIR$/server/controllers/user.js" />
@@ -239,6 +197,7 @@
         <option value="$PROJECT_DIR$/pages/index.vue" />
         <option value="$PROJECT_DIR$/store/index.js" />
         <option value="$PROJECT_DIR$/store/modules/blog/mutation-types.js" />
+        <option value="$PROJECT_DIR$/plugins/axios.js" />
         <option value="$PROJECT_DIR$/store/modules/blog/actions.js" />
         <option value="$PROJECT_DIR$/store/modules/auth/actions.js" />
       </list>
@@ -299,6 +258,11 @@
               <item name="next01" type="b2602c69:ProjectViewProjectNode" />
               <item name="next01" type="462c0819:PsiDirectoryNode" />
               <item name="layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="next01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="next01" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="next01" type="b2602c69:ProjectViewProjectNode" />
@@ -384,7 +348,7 @@
       <option name="presentableId" value="Default" />
       <updated>1524099206301</updated>
       <workItem from="1524099207802" duration="7089000" />
-      <workItem from="1524449746646" duration="34803000" />
+      <workItem from="1524449746646" duration="36268000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1524191912972</created>
@@ -397,7 +361,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55504000" />
+    <option name="totallyTimeSpent" value="56969000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1208" y="-492" width="1216" height="1896" extended-state="6" />
@@ -406,7 +370,7 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24936387" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.101021565" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.101021565" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32973894" />
       <window_info id="npm" order="2" side_tool="true" />
@@ -474,13 +438,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store/modules/auth/state.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/vars.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -505,7 +462,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/axios.js" />
     <entry file="file://$PROJECT_DIR$/server/models/tag.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
@@ -771,16 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store/modules/blog/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" column="42" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/store/modules/auth/mutations.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
@@ -807,11 +753,36 @@
     <entry file="file://$PROJECT_DIR$/store/modules/auth/getters.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/store/modules/auth/actions.js">
+    <entry file="file://$PROJECT_DIR$/store/modules/auth/state.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/axios.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store/modules/blog/actions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
+          <caret selection-end-line="5" />
           <folding>
-            <element signature="e#1#42#0" expanded="true" />
+            <element signature="e#38#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store/modules/auth/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#38#59#0" expanded="true" />
           </folding>
         </state>
       </provider>

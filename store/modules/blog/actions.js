@@ -1,5 +1,8 @@
-import axios from '@/plugins/axios'
-import * as types from './mutation-types';
+//import axios from '@/plugins/axios'
+import Vue from 'vue'
+import * as types from './mutation-types'
+
+const axios = Vue.axios
 
 export const CREATE_TAG = async ({commit}, params) => {
   const {data} = await axios.post(`tag`, params)
