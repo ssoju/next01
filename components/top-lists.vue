@@ -21,7 +21,7 @@
     props: {
       articles: {
         type: Array,
-        default: []
+        default: () => []
       }
     }
   }

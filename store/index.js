@@ -29,13 +29,13 @@ const createStore = () => {
         if (parsed && parsed.token) {
           accessToken = JSON.parse(parsed.token)
         }
-        commit('auth/token', accessToken)
+        commit('auth/SET_TOKEN', accessToken)
 
         const {user} = await axios.get('/auth/user')
-        commit('auth/update', user)
+        commit('auth/SET_USER', user)
       }
     },
-    strict: debug,
+    strict: false,
     plugins: debug ? [createLogger()] : []
   })
 }
