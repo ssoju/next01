@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import axios from 'axios'
 import createLogger from 'vuex/dist/logger'
 import cookieparser from 'cookieparser'
 
@@ -23,20 +22,23 @@ const createStore = () => {
     state,
     actions: {
       ...actions,
-      async nuxtServerInit({commit}, {req}) {
-        let accessToken = null
-        const parsed = cookieparser.parse(req.headers.cookie)
-        if (parsed && parsed.token) {
-          accessToken = JSON.parse(parsed.token)
+      async nuxtServerInit({commit, dispatch}, {req}) {
+        if (req.headers.cookie) {
+          let accessToken = null
+          const parsed = cookieparser.parse(req.headers.cookie)
+          if (parsed && parsed.token) {
+            accessToken = JSON.parse(parsed.token)
+          }
+          commit('auth/SET_TOKEN', accessToken)
         }
-        commit('auth/SET_TOKEN', accessToken)
 
-        const {user} = await axios.get('/auth/user')
+        //const {user} = await axios.get('/auth/user')
+        let user = await dispatch('auth/GET_USER')
         commit('auth/SET_USER', user)
       }
     },
-    strict: false,
-    plugins: debug ? [createLogger()] : []
+    strict: true,
+    plugins: []//debug ? [createLogger()] : []
   })
 }
 

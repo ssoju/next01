@@ -2,7 +2,7 @@
   <div class="login">
     <input type="text" placeholder="username" autocomplete="off" v-model="user.username">
     <input type="password" placeholder="password" autocomplete="off" v-model="user.password" @keyup.enter="login">
-    <button @click="login">로그인</button>
+    <button @click.prevent="login">로그인</button>
     <top-tip ref="tip"/>
   </div>
 </template>
@@ -21,9 +21,10 @@
     methods: {
       login () {
         if(!this.user.username || !this.user.password) {
+          alert('please enter')
           return
         }
-        this.$store.dispatch('LOGIN', this.user).then(data => {
+        this.$store.dispatch('auth/LOGIN', this.user).then(data => {
           if(data.success) {
             this.$router.push('/admin/publish')
           } else {
@@ -36,7 +37,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '@/assets/css/vars.scss';
+  @import '~/assets/css/vars.scss';
   .login {
     max-width: 700px;
     margin: 60px auto;

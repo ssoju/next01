@@ -1,9 +1,10 @@
 export default {
-  authenticated: true,
-  token: 'qazx',
+  authenticated: false,
+  token: '',
   user: {
-    email: 'comahead@gmail.com',
-    nickname: 'ssoju',
-    role: 1
+    username: '',
+    email: '',
+    nickname: '',
+    role: 'guest'
   }
 }

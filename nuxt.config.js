@@ -26,10 +26,10 @@ module.exports = {
   ////loading: false,
 
   router: {
-    middleware: ['i18n'],
+    ///middleware: ['i18n'],
     scrollBehavior(to, from, savedPosition) {
       // savedPosition은 오직 popstate 동작으로 가능합니다.
-      if (savedPosition) {
+      /**if (savedPosition) {
         return savedPosition
       } else {
         let position = {}
@@ -47,7 +47,7 @@ module.exports = {
           position = {selector: to.hash}
         }
         return position
-      }
+      }**/
     },
     extendRoutes(routes, resolve) {
       /*routes.push({
@@ -58,9 +58,9 @@ module.exports = {
     }
   },
 
-  plugins: ['@/plugins/bootloader.js', '@/plugins/i18n.js', '@/plugins/axios.js'],
+  plugins: ['@/plugins/bootloader.js', '@/plugins/i18n.js'/*, '@/plugins/axios.js'*/],
 
-  serverMiddleware: [
+  /*serverMiddleware: [
     bodyParser.json(),
     session({
       secret: 'super-secret-key',
@@ -68,7 +68,7 @@ module.exports = {
       saveUninitialized: false,
       cookie: { maxAge: 60000 }
     })
-  ],
+  ],*/
 
   //proxy: 'http://word.api.maru.zone/api/v1',
 
@@ -76,17 +76,17 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    extractCSS: {
+    /*extractCSS: {
       allChunks: true
-    },
+    },*/
 
     vendor: ['axios'],
 
     /*
     ** Run ESLint on save
     */
-    extend(config, {isDev, isClient}) {
-      if (isDev && isClient) {
+    extend(config, {isDev, client}) {
+      if (isDev && client) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,

@@ -7,8 +7,8 @@ require('../models/article')
 require('../models/tag')
 const User = mongoose.model('User')
 
-export default async(ctx, next) => {
-  const token = ctx.get('token')
+export default async(res, next) => {
+  const token = res.get('token')
   if (token) {
     const decoded = jwt.verify(token, config.jwt.secret)
     const username = decoded.username
@@ -18,19 +18,19 @@ export default async(ctx, next) => {
       if (user._id && user.username) {
         await next()
       } else {
-        return (ctx.body = {
+        return (res.body = {
           success: false,
           err: 'Token is invalid'
         })
       }
     } catch (e) {
-      return (ctx.body = {
+      return (res.body = {
         success: false,
         err: e
       })
     }
   } else {
-    return (ctx.body = {
+    return (res.body = {
       success: false,
       err: 'Please login'
     })

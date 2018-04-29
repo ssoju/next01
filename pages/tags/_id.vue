@@ -5,7 +5,7 @@
     </template>
     <template v-else>
       <ul class="tags-list">
-        <li class="tag" v-for="(tag, index) in TAGS" :key="index">
+        <li class="tag" v-for="(tag, index) in tags" :key="index">
           <nuxt-link :to="'/tags/'+ tag.id">{{ tag.name }}</nuxt-link>
         </li>
       </ul>
@@ -16,7 +16,7 @@
   export default {
     async asyncData({ store, route }) {
       let id = route.params.id || ''
-      let data = await store.dispatch('TAGS', id)
+      let data = await store.dispatch('blog/TAGS', id)
       if (route.params.id) {
         // articles
         if (data.success) {
@@ -45,7 +45,7 @@
   }
 </script>
 <style lang="scss" scoped>
-  @import '@/assets/css/vars.scss';
+  @import '~/assets/css/vars.scss';
   .tags-list {
     max-width: 700px;
     margin: 60px auto;

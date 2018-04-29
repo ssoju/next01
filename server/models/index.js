@@ -2,9 +2,9 @@ import mongoose from 'mongoose'
 import md5 from 'md5'
 import config from '../config'
 
-require('./user')
-require('./tag')
-require('./article')
+import './user'
+import './tag'
+import './article'
 
 const User = mongoose.model('User')
 const mongoUrl = `mongodb://${config.mongodb.username}:${config.mongodb.password}@${config.mongodb.host}:${config.mongodb.port}/${config.mongodb.database}`

@@ -20,7 +20,7 @@ export default {
   },
   production: {
     host: 'localhost',
-    domain: 'https://localhost'
+    domain: 'http://localhost'
     // domain: 'http://127.0.0.1:3000'
   },
   app: {

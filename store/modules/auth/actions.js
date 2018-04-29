@@ -1,49 +1,50 @@
-//import axios from '@/plugins/axios'
-import Vue from 'vue'
+import axios from '~/plugins/axios'
 import * as types from './mutation-types'
 
-const axios = Vue.axios
-
 export const CHECK = (store) => { // ({commit}) => commit(...)
-    store.commit(types.CHECK);
-};
+  store.commit(types.CHECK)
+}
 
-export const REGISTER = ({commit}, payload) => {
-    axios.post(`auth/register`, {
-            data: {...payload}
-        })
-        .then((response) => {
-            commit(types.REGISTER, response.data); // mutation 메소드 호출
-        });
-};
+export const REGISTER = async ({commit}, payload) => {
+  let response = await axios.post(`auth/register`, {
+    data: {...payload}
+  })
+  commit(types.REGISTER, response.data) // mutation 메소드 호출
+  return response
+}
 
-export const LOGIN = ({commit}, payload) => {
-    axios.post(`auth/login`, {
-            data: {
-                ...payload
-            }
-        })
-        .then((response) => {
-            commit(types.LOGIN, {
-                token: response.data.token
-            }); // mutation 메소드 호출
-        }).catch((a, b, c) => {
-        console.error(a, b, c);
-    });
-};
+export const LOGIN = async ({commit}, payload) => {
+  let response = await axios.post(`auth/login`, {
+    data: {
+      ...payload
+    }
+  })
+
+  commit(types.LOGIN, {
+    token: response.data.token
+  }) // mutation 메소드 호출
+
+  return response
+}
 
 
-export const LOGOUT = ({commit}) => {
-    axios.post(`auth/logout`)
-        .then(() => {
-            commit(types.LOGOUT); // mutation 메소드 호출
-        });
-};
+export const LOGOUT = async ({commit}) => {
+  let response = await axios.post(`auth/logout`)
+  commit(types.LOGOUT) // mutation 메소드 호출
+  return response
+}
+
+export const GET_USER = async ({commit}) => {
+  let response = await axios.get('auth/user')
+  commit(types.SET_USER, response.data)
+  return response
+}
 
 
 export default {
-    CHECK,
-    REGISTER,
-    LOGIN,
-    LOGOUT,
-};
+  CHECK,
+  REGISTER,
+  LOGIN,
+  LOGOUT,
+  GET_USER
+}

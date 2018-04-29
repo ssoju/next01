@@ -37,10 +37,10 @@ export const logout = async(ctx, next) => {
 }
 
 export const getUserInfo = async(ctx, next) => {
-  let avatarUrl = ctx.protocol + '://' + ctx.host + '/public/' + config.user.avatar
+  //let avatarUrl = ctx.protocol + '://' + ctx.host + '/public/' + config.user.avatar
   try {
     let data = await User.findOne({ role: 'superAdmin' }).exec()
-    data.avatar = avatarUrl
+    //data.avatar = avatarUrl
     ctx.body = {
       success: true,
       data: data

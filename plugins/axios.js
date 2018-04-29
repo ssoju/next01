@@ -1,46 +1,41 @@
-import * as axios from 'axios'
+import axios from 'axios'
 
-let options = {
-  headers: {
-    'X-Requested-With': 'XMLHttpRequest'
-  }
+let instance = axios.create({
+  baseURL: 'http://localhost:3000/api'
+})
+
+if (false && process.BROWSER_BUILD) {
+  instance.interceptors.request.use(
+    (config) => {
+      if (localStorage.getItem('jwt_token')) {
+        config.headers.common['Authorization'] = `Bearer ${localStorage.getItem('jwt_token')}`
+      }
+      return config
+    },
+    (error) => Promise.reject(error)
+  )
+  instance.interceptors.response.use(
+    response => response,
+    (error) => {
+      if (error.response.status >= 500) {
+        /*swal({
+          type: 'error',
+          title: 'Oops...',
+          html: 'Something went wrong! Please try again.'
+        })*/
+      } else if (error.response.status === 401 && localStorage.getItem('jwt_token')) {
+        /*swal({
+          title: 'Session Expired!',
+          html: 'Please log in again to continue.',
+          allowOutsideClick: false
+        })
+          .then(() => store.dispatch('auth/LOGOUT'))
+          .catch(swal.noop)*/
+
+      }
+      return Promise.reject(error)
+    }
+  )
 }
-// The server-side needs a full url to works
-if (process.SERVER_BUILD) {
-  options.baseURL = `http://${process.env.HOST || 'localhost'}:${process.env.PORT || 8000}`
-} else {
-  /*if (localStorage.getItem('jwt_token')) {
-    Object.assign(options.headers, {
-      'Authorization': 'Bearer ' + localStorage.getItem('jwt_token')
-    })
-  }*/
-}
 
-export default ({ app, store }) => {
-
-  console.log('111', app, store)
-  axios.interceptors.request.use(function (config) {
-    /**const token = (store && store.auth && store.auth.token) || ''
-
-    if (token) {
-      Object.assign(config.headers, {
-        'Authorization': 'Bearer ' + token
-      })
-    }**/
-
-    return config;
-  }, function (error) {
-    return Promise.reject(error);
-  });
-
-  axios.interceptors.response.use(function (response) {
-    return response;
-  }, function (error) {
-    return Promise.reject(error);
-  });
-
-  axios.create(options)
-  app.axios = axios;
-
-  return axios;
-}
+export default instance

@@ -60,7 +60,7 @@
   }
 </script>
 <style lang="scss" scoped>
-  @import '@/assets/css/vars.scss';
+  @import '~/assets/css/vars.scss';
   .page {
     max-width: 700px;
     display: flex;
